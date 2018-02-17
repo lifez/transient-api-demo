@@ -7,7 +7,7 @@ services:
     environment:
       WORDPRESS_DB_PASSWORD: example
     volumes:
-      - ./tc-plugin:/usr/share/nginx/www/wp-content/plugins/tc-plugin
+      - ./transient-demo:/usr/share/nginx/www/wp-content/plugins/transient-demo
 
   mysql:
     image: mysql:5.7
