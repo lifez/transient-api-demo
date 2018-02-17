@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  wordpress:
+    image: eugeneware/docker-wordpress-nginx
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+    volumes:
+      - ./tc-plugin:/usr/share/nginx/www/wp-content/plugins/tc-plugin
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: example
