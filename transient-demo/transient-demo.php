@@ -23,7 +23,7 @@ function generate_content() {
     foreach ( $posts as $post ) {
         $content .= '<p>' . $post->post_title . '</p>';
     }
-    set_transient( 'transient-feed', $content, 5 );
+    set_transient( 'transient-feed', $content );
     return $content;
 }
 
